@@ -499,10 +499,10 @@ namespace LinqLabs.作業
             foreach (var category in categorizedPrices)
             {
                 // 創建根節點
-                TreeNode categoryNode = new TreeNode(category.PriceCategory);
+                TreeNode categoryNode = new TreeNode(category.CategoryName);
 
                 // 創建子節點，顯示價格範疇
-                TreeNode priceNode = new TreeNode($"{category.CategoryName} - 平均價格: {category.AvgUnitPrice:C2}");
+                TreeNode priceNode = new TreeNode($"{category.PriceCategory} - 平均價格: {category.AvgUnitPrice:C2}");
                 categoryNode.Nodes.Add(priceNode);
 
                 // 將根節點添加到 TreeView
